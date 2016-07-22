@@ -14,12 +14,10 @@
 
 </head>
 <body>
-    <nav>
+    <nav class="blue darken-4">
         <div class="nav-wrapper">
             <a href="/home" class="brand-logo">MBiller</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-                <li>Logged in as: <strong><%= user.username %></strong></li>
                 <li class="active">	<a href="/employee"> Employee</a> </li>
                 <li>	<a href="/consumers"> Consumers</a></li>
                 <li>	<a href="/billing"> Billing</a></li>
@@ -29,30 +27,48 @@
         </div>
     </nav>
     <div class="container">
-    	<div class="row">
-            <div class="col m12">
-                <input class="col m9" type="text"/>
-                <a class="waves-effect waves-light btn blue darken-4 col m3">SEARCH</a>
-            </div>
-        </div>
         <div class="row">
             <div class="col m4 s12">
                 <div class="card">
-                    <!-- <div class="card-image">
+                  <!--   <div class="card-image">
                         <img src="../resources/img/example-profile.jpg">
                         <span class="card-title"><h3>John Doe</h3></span>
                     </div> -->
                     <div class="card-content">
-                        <h5>Check in time: </h5>
-                        <h5>Current time: </h5>
+                        <ul>
+                            <li>Logged in as: <strong><%= user.username %></strong></li>
+                            <li>Check in time: </li>
+                            <li>Current time: </li>
+                        </ul>
                     </div>
                     <div class="card-action">
-                        <a class="waves-effect waves-light button expand btn blue darken-4">CHECKOUT</a>
+                        <a class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
                     </div>  
                 </div>
             </div>
             <div class="col m8 s12">
-                <!-- <ConsumerInfo /> -->
+                <div className="card">
+                    <div className="card-title">
+                        <h5 className="text-center">Consumer Info</h5>
+                    </div>
+                    <div className="card-content">
+                        <ul>
+                            <li>Name: </li>
+                            <li>Address: </li>
+                            <li>Phone: </li>
+                            <li>Age: </li>
+                            <li>DOB: </li>
+                            <li>ID No: </li>
+                        </ul>
+                        <!-- <h5>Name: </h5>
+                        <h5>Address: </h5>
+                        <h5>Phone: </h5>
+                        <h5>Age: </h5>
+                        <h5>DOB: </h5>
+                        <h5>ID No: </h5> -->
+                    </div>
+                </div>
+            </div>
                 <div class="row">
                     <div class="col m12 l3">
                         <!-- <Medications /> -->
@@ -60,11 +76,10 @@
                     <div class="col m12 l9">
                         <!-- <Notes /> -->
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src='../resources/app.js'></script>
 </body>
-<script type="text/javascript" src='../app/app.js'></script>
 </html>
