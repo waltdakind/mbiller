@@ -13,38 +13,33 @@
 
 </head>
 <body>
-<nav>
-    <div class="nav-wrapper">
-        <a href="/home" class="brand-logo">MBiller</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-            <li>Logged in as: <strong><%= user.username %></strong></li>
-            <li>	<a href="/employee"> Employee</a> </li>
-            <li>	<a href="/consumers"> Consumers</a></li>
-            <li>	<a href="/billing"> Billing</a></li>
-            <li>	<a href="/notes"> Notes</a></li>
-            <li><a href="/logout">Logout</a></li>
-        </ul>
-</nav>
+	<nav class="blue darken-4">
+	    <div class="nav-wrapper">
+	        <a href="/home" class="brand-logo">MBiller</a>
+	        <ul id="nav-mobile" class="right hide-on-med-and-down">
+	            <li>Logged in as: <strong><%= user.username %></strong></li>
+	            <li>	<a href="/employee"> Employee</a> </li>
+	            <li>	<a href="/consumers"> Consumers</a></li>
+	            <li>	<a href="/billing"> Billing</a></li>
+	            <li>	<a href="/notes"> Notes</a></li>
+	            <li><a href="/logout">Logout</a></li>
+	        </ul>
+	    </div>
+	</nav>
     <div class="container">
-	<div class="row">
-
-		<!-- LOCAL INFORMATION -->
-		<div class="col-sm-6">
-			<div class="well">
-				<h3><strong><span class="fa fa-user"></span> <%= user.username %></strong></h3>
-
-					<p>
-						<strong>id</strong>: <%= user.id %><br>
-						<strong>username</strong>: <br>
-						<!--<strong>password: <%= user.password %>-->
-					</p>
-
+		<div class="row">
+			<!-- LOCAL INFORMATION -->
+			<div class="col-sm-6">
+				<div class="well">
+					<h3><strong><span class="fa fa-user"></span> <%= user.username %></strong></h3>
+						<p>
+							<strong>id</strong>: <%= user.id %><br>
+							<strong>username</strong>: <br>
+							<!--<strong>password: <%= user.password %>-->
+						</p>
+				</div>
 			</div>
 		</div>
-
 	</div>
-
-</div>
 </body>
 </html>
