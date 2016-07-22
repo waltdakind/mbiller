@@ -13,13 +13,10 @@
 
 </head>
 <body>
-<nav>
-	<nav>
+  <nav class="blue darken-4">
 		<div class="nav-wrapper">
 			<a href="/home" class="brand-logo">MBiller</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-
-				<li>Logged in as: <strong><%= user.username %></strong></li>
 				<li>	<a href="/employee"> Employee</a> </li>
 				<li>	<a href="/consumers"> Consumers</a></li>
 				<li class="active">	<a href="/billing"> Billing</a></li>
@@ -29,6 +26,26 @@
 	</nav>
 </div>
 <div class="container">
+  <div class="row">
+    <div class="col m4 s12">
+      <div class="card">
+        <!--   <div class="card-image">
+              <img src="../resources/img/example-profile.jpg">
+              <span class="card-title"><h3>John Doe</h3></span>
+          </div> -->
+          <div class="card-content">
+              <ul>
+                  <li>Logged in as: <strong><%= user.username %></strong></li>
+                  <li>Check in time: </li>
+                  <li>Current time: </li>
+              </ul>
+          </div>
+          <div class="card-action">
+              <a class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
+          </div>  
+      </div>
+    </div>
+    <div class="col m8 s12">
  <table class="striped">
   <h3 class="center-align" id="billtitle">Billing Report</h3>
         <thead>
@@ -66,6 +83,8 @@
           </tr>
         </tbody>
       </table>
+      </div>
+      </div>
 </div>
 </body>
 <script type="text/javascript" src='app.js'></script>
