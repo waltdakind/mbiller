@@ -1,0 +1,44 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>MBiller</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+	<style>
+		body 		{ padding-top:80px; }
+	</style>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="/home" class="brand-logo">MBiller</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+
+            <li>	<a href="/employee"> Employee</a> </li>
+            <li>	<a href="/consumers"> Consumers</a></li>
+            <li>	<a href="/billing"> Billing</a></li>
+            <li>	<a href="/notes"> Notes</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+</nav>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1><span class="fa fa-lock"></span> MBiller -- Service billing app for agencies supporting people with disabilities</h1>
+
+            <p>Login or Register here:</p>
+
+            <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Login</a>
+            <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
+        </div>
+    </div>
+</body>
+</html>
