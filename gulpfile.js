@@ -5,7 +5,7 @@ var del = require('del');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
     del(['./build/*']);
 });
 gulp.task('greet', function () {
