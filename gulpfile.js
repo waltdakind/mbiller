@@ -6,11 +6,11 @@ var del = require("del");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var source = require("vinyl-source-stream");
-var buffer = require("vinyl-buffer");
+//var source = require("vinyl-source-stream");
+//var buffer = require("vinyl-buffer");
 // var gutil = require("gulp-util");
 // var watchify = require("watchify");
-var nodemon = require("gulp-nodemon");
+//var nodemon = require("gulp-nodemon");
 
 // const b = watchify(browserify({
 //     plugin: [watchify],
@@ -43,17 +43,17 @@ gulp.task('greet', function () {
 //     return rebundle();
 //});
 
-gulp.task("css", function() {
-    const stream = gulp.src("scss/style.scss")
-        .pipe(sass())
-        .pipe(postcss([autoprefixer({
-            browsers: ["last 2 version"]
-        })]))
-        .pipe(gulp.dest("./build"))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
-    return stream;
+var input = './src/scss/**/*.scss';
+var output = './src/resources/css';
+
+gulp.task('sass', function () {
+  return gulp
+    // Find all `.scss` files from the `stylesheets/` folder
+    .src(input)
+    // Run Sass on those files
+    .pipe(sass())
+    // Write the resulting CSS in the output folder
+    .pipe(gulp.dest(output));
 });
 
 //gulp.task("browser-sync", ["server"], function() {
@@ -78,9 +78,9 @@ gulp.task("build", ["css"], function(cb) {
     cb();
 });
 
-gulp.task("default", ["greet", "build", "server"], function() {
-    gulp.watch("/scss/*.scss", ["css"]);
+gulp.task("default", ["greet", "sass", "server"], function() {
+    //gulp.watch("/scss/*.scss", ["css"]);
 });
 gulp.task('heroku: task', function(){
-  runSeq('greet', 'clean', 'build', 'server')
+  runSeq('greet', 'sass')
 });
