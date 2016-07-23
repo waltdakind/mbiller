@@ -81,6 +81,6 @@ gulp.task("build", ["css"], function(cb) {
 gulp.task("default", ["greet", "build", "server"], function() {
     gulp.watch("/scss/*.scss", ["css"]);
 });
-gulp.task('heroku:production', function(){
+gulp.task('heroku: task', function(){
   runSeq('greet', 'clean', 'build', 'server')
 });
