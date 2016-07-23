@@ -78,6 +78,6 @@ gulp.task("build", ["css"], function(cb) {
     cb();
 });
 
-gulp.task("default", ["greet", "sass", "server"], function() {
+gulp.task("default", ["greet", "sass"], function() {
     //gulp.watch("/scss/*.scss", ["css"]);
 });
