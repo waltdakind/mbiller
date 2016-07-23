@@ -1,9 +1,15 @@
 {
-  "name": "node-authentication",
-  "main": "server.js",
+  "name": "MBiller",
+  "description": "Medicaid billing app",
+  "repository": "https://github.com/waltdakind/temporary/",
+  "license": "AGPL-3.0",
+  "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "build": "gulp"
+    "postinstall": "gulp sass"
+  },
+    "engines": {
+    "node": "6.2.2"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -17,10 +23,17 @@
     "mysql": "^2.7.0",
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
-    "react": "^15.2.1"
+    "gulp-sass": "2.3.2",
+    "gulp-postcss": "6.1.1",
+    "del": "^2.2.1",
+    "react": "^15.2.1",
+    "postcss":"^5.0.21",
+    "autoprefixer":"6.3.7",
+    "vinyl-source-stream": "1.1.0",
+    "vinyl-buffer": "1.0.0",
+    "gulp-nodemon": "2.1.0"
   },
   "devDependencies": {
-    "del": "^2.2.1",
     "gulp": "^3.9.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
