@@ -34,12 +34,19 @@
     <div class="container">
 		<div class="row">
 			<!-- LOCAL INFORMATION -->
-			<div class="col-sm-6">
-				<div class="well">
-					<h3><strong><span class="fa fa-user"></span> <%= user.username %></strong></h3>
-						<p>
-							<strong>id</strong>: <%= user.id %><br>
-						</p>
+			<div class="col s12">
+				<div class="card">
+					<div class="row">
+						<div class="card-image col l3 s12">
+	              			<img src="../resources/img/cat.jpg">
+	            		</div>
+	            	
+            		<div class="card-content col l9 s12">
+            			<span class="card-title"><%= user.username %>'s profile</span>
+              			<p>I am a very simple card. I am good at containing small bits of information.
+              			I am convenient because I require little markup to use effectively.</p>
+            		</div>
+            		</div>
 				</div>
 			</div>
 		</div>
