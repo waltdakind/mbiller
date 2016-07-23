@@ -12,7 +12,8 @@
 	<style>
         .nav-wrapper {margin: 0 2%;}
         nav {margin-bottom: 40px;}
-        
+        body {background: url('../resources/img/stethoscope.jpg');}
+        #searchCard {min-height: 187px;}
     </style>
 	<!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -52,11 +53,16 @@
                     </div>  
                 </div>
             </div>
-	        <div class="col m8 input-field">
-	            <input id="searchBar" class="col m9 validate" type="text"/>
-	            <label for="searchBar" class="">search consumer</label>
-	            <a class="waves-effect waves-light btn blue darken-4 col m3">SEARCH</a>
-	            <div id="consumerList"></div>
+	        <div class="col m8">
+	        	<div class="card" id="searchCard">
+		        	<div class="card-content">
+		        		<div class="input-field">
+				            <input id="searchBar" class="col m9 validate" type="text"/>
+				            <label for="searchBar" class="">search consumer</label>
+				            <a class="waves-effect waves-light btn blue darken-4 col m3">SEARCH</a>
+			            </div>
+		        	</div>
+	        	</div>
 	        </div>
 	    </div>
 	</div>
