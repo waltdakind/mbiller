@@ -30,7 +30,8 @@
     "postcss":"^5.0.21",
     "autoprefixer":"6.3.7",
     "vinyl-source-stream": "1.1.0",
-    "vinyl-buffer": "1.0.0"
+    "vinyl-buffer": "1.0.0",
+    "gulp-nodemon": "2.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
