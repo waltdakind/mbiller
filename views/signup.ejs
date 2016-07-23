@@ -1,0 +1,71 @@
+<!-- views/signup.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MBiller</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> 
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<link rel="shortcut icon" type="image/png" href="../resources/img/favicon-medkit.ico"/>
+	<style>
+      #bigLogo{
+            width:400px;
+            height: 150px;
+            margin-top: 32px;
+        }
+        .jumbotron {
+            border: 1px solid blue;
+            opacity: .9;
+        }
+        .nav-wrapper {margin: 0 2%;}
+        nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
+
+    </style>
+</head>
+<body>
+<nav class="blue darken-4">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
+        </div>
+    </nav>
+<div class="container">
+	<div class="jumbotron text-center">
+		<img id="bigLogo" src="../resources/img/bigLogo.png">
+		<h4><span class="fa fa-sign-in"></span> Signup</h4>
+
+		<!-- show any messages that come back with authentication -->
+		<% if (message.length > 0) { %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% } %>
+
+		<!-- LOGIN FORM -->
+		<form action="/signup" method="post">
+			<div class="form-group left-align">
+				<!-- <label>Username</label> -->
+				<input type="text" class="form-control" name="username" placeholder="username">
+			</div>
+			<div class="form-group left-align">
+				<!-- <label>Password</label> -->
+				<input type="password" class="form-control" name="password" placeholder="password">
+			</div>
+
+			<button type="submit" class="btn blue darken-4 btn-lg">Signup</button>
+		</form>
+
+		<hr>
+
+		<p>Already have an account? <a href="/login">Login</a></p>
+		<p>Or go <a href="/">home</a>.</p>
+
+	</div>
+
+</div>
+<script type="text/javascript" src='../resources/js/app.js'></script>
+</body>
+</html>
