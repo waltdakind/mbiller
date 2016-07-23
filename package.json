@@ -1,6 +1,9 @@
 {
-  "name": "node-authentication",
-  "main": "server.js",
+  "name": "MBiller",
+  "description": "Medicaid billing app",
+  "repository": "https://github.com/waltdakind/temporary/",
+  "license": "",
+  "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
     "build": "gulp"
