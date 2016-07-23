@@ -17,6 +17,10 @@
         }
         .nav-wrapper {margin: 0 2%;}
         nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
+        .container {opacity: .9;}
+        .jumbotron {border: 1px solid blue;}
+        
     </style>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -27,13 +31,13 @@
     <nav class="blue darken-4">
         <div class="nav-wrapper">
             <a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>    <a href="/employee"> Employee</a> </li>
                 <li class="active"> <a href="/consumers"> Consumers</a></li>
                 <li>    <a href="/billing"> Billing</a></li>
                 <li>    <a href="/notes"> Notes</a></li>
                 <li><a href="/logout">Logout</a></li>
-            </ul>
+            </ul> -->
         </div>
     </nav>
     <div class="container">
@@ -42,8 +46,8 @@
             <h5> Service billing app for agencies supporting people with disabilities</h5>
             <p>Login or Register here:</p>
 
-            <a href="/login" class="btn btn-default blue darken-4"><span class="fa fa-user"></span> Login</a>
-            <a href="/signup" class="btn btn-default blue darken-4"><span class="fa fa-user"></span> Signup</a>
+            <a href="/login" class="btn btn-default blue darken-4"><span class="fa fa-sign-in"></span> Login</a>
+            <a href="/signup" class="btn btn-default blue darken-4"><span class="fa fa-plus"></span> Signup</a>
         </div>
     </div>
     <script type="text/javascript" src='../resources/js/app.js'></script>
