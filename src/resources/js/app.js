@@ -6,19 +6,19 @@ $(document).ready(function(){
 
 	$('.currentTime').append(time);
 	
-	var consumerArr = ['John Smith', 'Mark Thompson', 'David Ortiz', 'Jerry Mathers', 'Wilson Pickett'];
-	var consumerList = '<ul>';
+	// var consumerArr = ['John Smith', 'Mark Thompson', 'David Ortiz', 'Jerry Mathers', 'Wilson Pickett'];
+	// var consumerList = '<ul>';
 
-	for(i=0;i<consumerArr.length; i++){
+	// for(i=0;i<consumerArr.length; i++){
 		
-		consumerList += '<li>' + consumerArr[i] + '<li>';
+	// 	consumerList += '<li>' + consumerArr[i] + '<li>';
 
-	}
-	consumerList += '<ul>';
+	// }
+	// consumerList += '<ul>';
 
 	// $('#consumerDiv').append(consumerList);
-	$('#addNote').on('click', function(){
-		var newNote = '<li><strong> ' + time + ' </strong>- ' + $('#insertNote').val() + '</li><br>';
+	$('#noteBtn').on('click', function(){
+		var newNote = '<br><li><strong> ' + time + ' </strong>- ' + $('#noteInput').val() + '</li>';
 		$('#notesList').prepend(newNote);
 	});
 
