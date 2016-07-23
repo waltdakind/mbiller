@@ -19,7 +19,7 @@ $(document).ready(function(){
 	// $('#consumerDiv').append(consumerList);
 	$('#noteBtn').on('click', function(){
 		var newNote = '<br><li><strong> ' + time + ' </strong>- ' + $('#noteInput').val() + '</li>';
-		$('#notesList').prepend(newNote);
+		$('#notesList').append(newNote);
 	});
 
 });
