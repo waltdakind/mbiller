@@ -58,13 +58,14 @@
 		                <div class="card-title">
 		                    <h5 class="text-center">Notes</h5>
 		                </div>
-	                    <ul>
-	                        <li><%= user.username %></li>
-	                        <li>Note 2</li>
-	                        <li>Phone: </li>
-	                        <li>Age: </li>
-	                        <li>DOB: </li>
-	                        <li>ID No: </li>
+		                <div class="row">
+		                <div class="input-field">
+		                	<input class="col s9" type="text" name="addNote" id="insertNote" placeholder="add note">
+		                	<button class="col s3 btn blue darken-4" id="addNote">ADD</button>
+		                </div>
+		                </div>
+	                    <ul id="notesList">
+	                        
 	                    </ul>
 	                    <!-- <h5>Name: </h5>
 	                    <h5>Address: </h5>
