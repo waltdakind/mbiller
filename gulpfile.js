@@ -78,9 +78,10 @@ gulp.task("build", ["css"], function(cb) {
     cb();
 });
 gulp.task("heroku:production", "sass", function() {
-    //gulp.watch("/scss/*.scss", ["css"]);
+    console.log('it works');
 });
 
 gulp.task("default", ["greet", "sass"], function() {
+    console.log('gulp default has run');
     //gulp.watch("/scss/*.scss", ["css"]);
 });
