@@ -1,0 +1,92 @@
+<!-- views/worker.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MBiller</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="shortcut icon" type="image/png" href="../resources/img/favicon-medkit.ico"/>
+    <link rel="stylesheet" type="text/scss" href="../src/scss/style.scss">
+    <style>
+        .nav-wrapper {margin: 0 2%;}
+        nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
+        .employeeSession {font-size: 1.5em;}
+    </style>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <nav class="blue darken-4">
+        <div class="nav-wrapper" style="margin: 0 2%;">
+            <a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active">	<a href="/employee"> Employee</a> </li>
+                <li>	<a href="/consumers"> Consumers</a></li>
+                <li>	<a href="/billing"> Billing</a></li>
+                <li>	<a href="/notes"> Notes</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col m4 s12">
+                <div class="card">
+                  <!--   <div class="card-image">
+                        <img src="../resources/img/example-profile.jpg">
+                        <span class="card-title"><h3>John Doe</h3></span>
+                    </div> -->
+                    <div class="card-content employeeSession">
+                        <ul>
+                            <li>Logged in as: <strong><%= user.username %></strong></li>
+                            <li class="currentTime">Current time: </li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="/logout" class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
+                    </div>  
+                </div>
+            </div>
+            <div class="col m8 s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h5 class="center-align">Consumer Info</h5>
+                        </div>
+                        <ul>
+                            <li>Name: Alvin Harris</li>
+                            <li>Address: Meadow Hill</li>
+                            <li>Phone: 867-5309</li>
+                            <li>Age: 32</li>
+                            <li>DOB: 10-25-83</li>
+                            <li>ID No: 1346</li>
+                        </ul>
+                        <!-- <h5>Name: </h5>
+                        <h5>Address: </h5>
+                        <h5>Phone: </h5>
+                        <h5>Age: </h5>
+                        <h5>DOB: </h5>
+                        <h5>ID No: </h5> -->
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col m12 l3">
+                        <!-- <Medications /> -->
+                    </div>  
+                    <div class="col m12 l9">
+                        <!-- <Notes /> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src='../resources/js/app.js'></script>
+</body>
+</html>
