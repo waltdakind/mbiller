@@ -2,7 +2,7 @@
   "name": "MBiller",
   "description": "Medicaid billing app",
   "repository": "https://github.com/waltdakind/temporary/",
-  "license": "",
+  "license": "GNU",
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
