@@ -14,6 +14,7 @@
         nav {margin-bottom: 40px;}
         body {background: url('../resources/img/stethoscope.jpg');}
         #searchCard {min-height: 187px;}
+        .employeeSession {font-size: 1.5em;}
     </style>
 	<!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -41,11 +42,10 @@
                         <img src="../resources/img/example-profile.jpg">
                         <span class="card-title"><h3>John Doe</h3></span>
                     </div> -->
-                    <div class="card-content">
-                    	<ul>
-	                    	<li>Logged in as: <strong><%= user.username %></strong></li>
-	                        <li>Check in time: </li>
-	                        <li>Current time: </li>
+                    <div class="card-content employeeSession">
+                        <ul>
+                            <li>Logged in as: <strong><%= user.username %></strong></li>
+                            <li class="currentTime">Current time: </li>
                         </ul>
                     </div>
                     <div class="card-action">

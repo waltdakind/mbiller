@@ -12,6 +12,7 @@
         .nav-wrapper {margin: 0 2%;}
         nav {margin-bottom: 40px;}
         body {background: url('../resources/img/stethoscope.jpg');}
+        .employeeSession {font-size: 1.5em;}
     </style>
 	<!-- jquery -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
@@ -40,13 +41,12 @@
 	                        <img src="../resources/img/example-profile.jpg">
 	                        <span class="card-title"><h3>John Doe</h3></span>
 	                    </div> -->
-	                <div class="card-content">
-	                    <ul>
-	                        <li>Logged in as: <strong><%= user.username %></strong></li>
-	                        <li>Check in time: </li>
-	                        <li>Current time: </li>
-	                    </ul>
-	                </div>
+	                <div class="card-content employeeSession">
+                        <ul>
+                            <li>Logged in as: <strong><%= user.username %></strong></li>
+                            <li class="currentTime">Current time: </li>
+                        </ul>
+                    </div>
 	                <div class="card-action">
 	                    <a href="/logout" class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
 	                </div>  
