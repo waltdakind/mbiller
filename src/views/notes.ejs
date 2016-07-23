@@ -47,18 +47,18 @@
 	                    </ul>
 	                </div>
 	                <div class="card-action">
-	                    <a class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
+	                    <a href="/logout" class="waves-effect waves-light expand expand btn blue darken-4">CHECKOUT</a>
 	                </div>  
 	            </div>
 	        </div>
 	    	<div class="col m8 s12">
-	    		<div className="card">
-	                <div className="card-title">
-	                    <h5 className="text-center">Notes</h5>
-	                </div>
-	                <div className="card-content">
+	    		<div class="card">
+	                <div class="card-content">
+		                <div class="card-title">
+		                    <h5 class="text-center">Notes</h5>
+		                </div>
 	                    <ul>
-	                        <li>Note</li>
+	                        <li><%= user.username %></li>
 	                        <li>Note 2</li>
 	                        <li>Phone: </li>
 	                        <li>Age: </li>
