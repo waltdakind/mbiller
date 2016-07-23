@@ -23,12 +23,12 @@
     "mysql": "^2.7.0",
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
+    "gulp-sass": "2.3.2",
     "del": "^2.2.1",
     "react": "^15.2.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^1.0.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
