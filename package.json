@@ -24,6 +24,7 @@
     "passport": "^0.2.2",
     "passport-local": "^1.0.0",
     "gulp-sass": "2.3.2",
+    "gulp-postcss": "6.1.1",
     "del": "^2.2.1",
     "react": "^15.2.1"
   },
