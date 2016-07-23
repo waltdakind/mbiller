@@ -11,6 +11,7 @@
 	<style>
         .nav-wrapper {margin: 0 2%;}
         nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
     </style>
 	<!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -43,8 +44,9 @@
 	            	
             		<div class="card-content col l9 s12">
             			<span class="card-title"><%= user.username %>'s profile</span>
-              			<p>I am a very simple card. I am good at containing small bits of information.
-              			I am convenient because I require little markup to use effectively.</p>
+              			<ul>
+              				<li>ID: <%= user.id %></li>
+              			</ul>
             		</div>
             		</div>
 				</div>
