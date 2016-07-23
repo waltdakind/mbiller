@@ -77,7 +77,7 @@ gulp.task("server", ["build"], function(cb) {
 gulp.task("build", ["css"], function(cb) {
     cb();
 });
-gulp.task("heroku:production", "sass", function() {
+gulp.task("heroku:production", ["clean", "sass"], function() {
     console.log('it works');
 });
 
