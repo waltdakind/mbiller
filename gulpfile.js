@@ -1,6 +1,6 @@
 var gulp = require("gulp");
-var browserify = require("browserify");
-var browserSync = require("browser-sync");
+// var browserify = require("browserify");
+// var browserSync = require("browser-sync");
 var del = require("del");
 //var babelify = require("babelify");
 var sass = require("gulp-sass");
@@ -8,8 +8,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
-var gutil = require("gulp-util");
-var watchify = require("watchify");
+// var gutil = require("gulp-util");
+// var watchify = require("watchify");
 var nodemon = require("gulp-nodemon");
 
 // const b = watchify(browserify({
@@ -82,7 +82,6 @@ gulp.task('heroku:production', function(){
   runSeq('greet', 'clean', 'build', 'server')
 })
 
-
-gulp.task("default", ["greet", "build", "server", "browser-sync"], function() {
-    gulp.watch("scss/*.scss", ["css"]);
+gulp.task("default", ["greet", "build", "server"], function() {
+  //  gulp.watch("/scss/*.scss", ["css"]);
 });
