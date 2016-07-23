@@ -15,7 +15,7 @@ var flash    = require('connect-flash');
 // configuration ===============================================================
 // connect to our database
 
-require(./config/passport')(passport); // pass passport for configuration
+require('./config/passport')(passport); // pass passport for configuration
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
@@ -39,8 +39,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 // routes ======================================================================
-require('./routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
-app.listen(port);
+app.listen(process.env.PORT || 8080);
 console.log('The magic happens on port ' + port);
