@@ -6,7 +6,7 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "postinstall": "gulp sass"
+    "sass": "gulp sass"
   },
     "engines": {
     "node": "6.2.2"
