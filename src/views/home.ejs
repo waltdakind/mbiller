@@ -1,0 +1,42 @@
+<!-- views/home.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MBiller</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link rel="shortcut icon" type="image/png" href="../resources/img/favicon-medkit.ico"/>
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="../resources/scss/style.scss">
+	<style>
+        .nav-wrapper {margin: 0 2%;}
+        nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
+        .employeeSession {font-size: 1.5em;}
+    </style>
+  	<!-- jquery -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+<body>
+	<nav class="blue darken-4">
+		<div class="nav-wrapper">
+			<a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li>	<a href="/employee"> Employee</a> </li>
+				<li>	<a href="/consumers"> Consumers</a></li>
+				<li>	<a href="/billing"> Billing</a></li>
+				<li>	<a href="/notes"> Notes</a></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+	</div>
+	<script type="text/javascript" src='../resources/js/app.js'></script>
+</body>
+</html>
