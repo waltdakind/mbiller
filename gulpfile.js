@@ -44,7 +44,7 @@ gulp.task("javascript", function() {
 });
 
 gulp.task("css", function() {
-    const stream = gulp.src("scss/app.scss")
+    const stream = gulp.src("scss/style.scss")
         .pipe(sass())
         .pipe(postcss([autoprefixer({
             browsers: ["last 2 version"]
