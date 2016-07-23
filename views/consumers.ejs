@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/views/consumers.ejs
 <!-- views/consumers.ejs -->
 <!doctype html>
 <html>
@@ -120,3 +121,79 @@
 	</script>
 </body>
 </html>
+=======
+<!-- views/consumers.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>MBiller</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link rel="shortcut icon" type="image/png" href="../resources/img/favicon-medkit.ico"/>
+	<link rel="stylesheet" type="text/css" href="../build/style.css">
+	<style>
+        .nav-wrapper {margin: 0 2%;}
+        nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
+        #searchCard {min-height: 187px;}
+        .employeeSession {font-size: 1.5em;}
+    </style>
+	<!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</head>
+<body>
+	<nav class="blue darken-4">
+		<div class="nav-wrapper">
+			<a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li>	<a href="/employee"> Employee</a> </li>
+				<li class="active">	<a href="/consumers"> Consumers</a></li>
+				<li>	<a href="/billing"> Billing</a></li>
+				<li>	<a href="/notes"> Notes</a></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col m4 s12">
+                <div class="card">
+                  <!--   <div class="card-image">
+                        <img src="../resources/img/example-profile.jpg">
+                        <span class="card-title"><h3>John Doe</h3></span>
+                    </div> -->
+                    <div class="card-content employeeSession">
+                        <ul>
+                            <li>Logged in as: <strong><%= user.username %></strong></li>
+                            <li class="currentTime">Current time: </li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="/logout" class="waves-effect waves-light expand expand btn blue darken-4" id="checkoutBtn">CHECKOUT</a>
+                    </div>  
+                </div>
+            </div>
+	        <div class="col m8">
+	        	<div class="card" id="searchCard">
+		        	<div class="card-content">
+		        		<div class="input-field">
+				            <input id="searchBar" class="col m9 validate" type="text"/>
+				            <label for="searchBar" class="">search consumer</label>
+				            <a class="waves-effect waves-light btn blue darken-4 col m3">SEARCH</a>
+			            </div>
+		        	</div>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+	<script type="text/javascript" src='../resources/js/app.js'></script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
+>>>>>>> master:views/consumers.ejs
