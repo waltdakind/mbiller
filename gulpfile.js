@@ -41,7 +41,7 @@ gulp.task('greet', function () {
 
 //     b.on("update", rebundle);
 //     return rebundle();
-});
+//});
 
 gulp.task("css", function() {
     const stream = gulp.src("scss/style.scss")
@@ -56,12 +56,12 @@ gulp.task("css", function() {
     return stream;
 });
 
-gulp.task("browser-sync", ["server"], function() {
-    browserSync.init({
-        port: process.env.PORT || 8080,
-        proxy: "http://localhost:8000"
-    });
-});
+//gulp.task("browser-sync", ["server"], function() {
+//    browserSync.init({
+//        port: process.env.PORT || 8080,
+ //       proxy: "http://localhost:8000"
+//    });
+//});
 
 gulp.task("server", ["build"], function(cb) {
     nodemon({script: "./src/server.js", env: {"NODE_ENV": "production"}})
@@ -70,18 +70,17 @@ gulp.task("server", ["build"], function(cb) {
         });
 });
 
-// gulp.task("clean", function(cb) {
-//     del(["build"], cb);
-// });
+ gulp.task("clean", function(cb) {
+     del(["build"], cb);
+ });
 
 gulp.task("build", ["css"], function(cb) {
     cb();
 });
 
+gulp.task("default", ["greet", "build", "server"], function() {
+    gulp.watch("/scss/*.scss", ["css"]);
+});
 gulp.task('heroku:production', function(){
   runSeq('greet', 'clean', 'build', 'server')
-})
-
-gulp.task("default", ["greet", "build", "server"], function() {
-  //  gulp.watch("/scss/*.scss", ["css"]);
-})
+});
