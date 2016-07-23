@@ -12,10 +12,15 @@
       #bigLogo{
             width:400px;
             height: 150px;
+            margin-top: 32px;
         }
-
+        .jumbotron {
+            border: 1px solid blue;
+            opacity: .9;
+        }
         .nav-wrapper {margin: 0 2%;}
         nav {margin-bottom: 40px;}
+        body {background: url('../resources/img/stethoscope.jpg');}
 
     </style>
     <!-- jquery -->
@@ -25,8 +30,13 @@
 
 </head>
 <body>
+    <nav class="blue darken-4">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo"><img src="../resources/img/logo.png"></a>
+        </div>
+    </nav>
     <div class="container">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="jumbotron text-center">
         <img id="bigLogo" src="../resources/img/bigLogo.png">
             <h1><span class="fa fa-sign-in"></span> Login</h1>
 
@@ -37,15 +47,15 @@
 
             <!-- LOGIN FORM -->
             <form action="/login" method="post">
-                <div class="form-group">
+                <div class="form-group left-align">
                     <label>Username</label>
                     <input type="text" class="form-control" name="username">
                 </div>
-                <div class="form-group">
+                <div class="form-group left-align">
                     <label>Password</label>
                     <input type="password" class="form-control" name="password">
                 </div>
-                <div class="form-group">
+                <div class="form-group left-align">
                     <label>Remember Me</label>
                     <input type="checkbox" class="form-control" name="remember" value="yes">
                 </div>
