@@ -1,7 +1,7 @@
 /**
  * Created by barrett on 8/28/14.
  */
-
+/* jshint multistr: true */
 var mysql = require('mysql');
 var dbconfig = require('../config/database');
 
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `workers` ( \
     `consumer`\
 )');
 
-console.log('Success: Table Created!')
+console.log('Success: Table Created!');
 
 connection.end();
 

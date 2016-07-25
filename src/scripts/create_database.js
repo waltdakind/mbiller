@@ -1,7 +1,7 @@
 /**
  * Created by barrett on 8/28/14.
  */
-
+/* jshint multistr: true */
 var mysql = require('mysql');
 var dbconfig = require('../config/database');
 
@@ -19,7 +19,7 @@ CREATE TABLE `' + dbconfig.database + '`.`' + dbconfig.users_table + '` ( \
     UNIQUE INDEX `username_UNIQUE` (`username` ASC) \
 )');
 
-console.log('Success: Database Created!')
+console.log('Success: Database Created!');
 
 connection.end();
 
