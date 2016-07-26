@@ -1,4 +1,4 @@
-# temporary
-just someplace to test this
+# MBiller
+App for tracking hours and services delivered to people with disabilities
 
-This is a temporary repository to fix issues while deploying this app
+MySQL, Materialize, EJS
