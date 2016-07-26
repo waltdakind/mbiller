@@ -1,7 +1,19 @@
-var gulp = require("gulp");
-var jshint = require("gulp-jshint");
-var server = require('gulp-server-livereload');
-var chalk = require('chalk');
+var gulp = require("gulp"),
+    server = require( 'gulp-develop-server' ),
+    jshint = require("gulp-jshint"),
+    livereload = require( 'gulp-livereload' ),
+    chalk = require('chalk');
+var port     = process.env.PORT || 8080;
+
+var options = {
+    path: './src/server.js'
+};
+
+var serverFiles = [
+    './src/apps/routes.js',
+    './src/resources/js/*.js',
+    './src/views/*.ejs'
+];
 
 gulp.task("lint", function() {
     gulp.src("./src/**/*.js")
@@ -10,19 +22,28 @@ gulp.task("lint", function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/**/*.js", ["lint"]);
+    gulp.watch("./src/**/*.js", ["lint"]);
 });
 
-gulp.task('webserver', function() {
-  console.log(chalk.green('Webserver running! WOOT'))
-  gulp.src('app')
-    .pipe(server({
-      livereload: true,
-      directoryListing: true,
-      open: true
-    }));
+// run server
+gulp.task( 'server:start', function() {
+  console.log(chalk.green('Webserver running! WOOT'));
+    server.listen( options, livereload.listen );
 });
 
-gulp.task("default", ["lint", "watch", "webserver"], function() {
-    console.log(chalk.blue(('Gulp default tasks running...')));
+// restart server if app.js changed
+gulp.task( 'server:restart', function() {
+    gulp.watch( [ serverFiles ], server.restart );
+});
+
+// If server scripts change, restart the server and then livereload.
+gulp.task( 'default', [ 'lint', 'server:start' ], function() {
+console.log(chalk.blue(('Gulp default tasks running...')));
+    function restart( file ) {
+        server.changed( function( error ) {
+            if( ! error ) livereload.changed( file.path );
+        });
+    }
+
+    gulp.watch( serverFiles ).on( 'change', restart );
 });
