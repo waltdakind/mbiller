@@ -1,7 +1,7 @@
 {
   "name": "MBiller",
   "description": "Medicaid billing app",
-  "repository": "https://github.com/waltdakind/temporary/",
+  "repository": "https://github.com/waltdakind/mbiller",
   "license": "AGPL-3.0",
   "main": "./src/server.js",
   "scripts": {
